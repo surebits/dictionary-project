@@ -4,7 +4,7 @@ const app = express()
 const port = process.env.PORT || 3000
 const word = require('./word');
 
-app.use(cors({origin: true}))
+app.use(cors({origin: "https://surebits.github.io"}))
 app.use(express.json());
 
 app.get('/', (req, res) => {
