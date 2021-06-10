@@ -1,10 +1,10 @@
 const mysql = require('mysql2');
 
 const conn = mysql.createConnection({
-//   host: "https://cs472-dict.herokuapp.com",
+  host: "https://cs472-dict.herokuapp.com",
   user: "root",
   password: "password",
-  database: "entries",
+  database: process.env.CLEARDB_DATABASE_URL,
 });
 
 exports.lookup = function (req, res) {    
