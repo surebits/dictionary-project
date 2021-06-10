@@ -5,7 +5,7 @@ $("button").keyup(function(e){
 });
 
 function wordLookup() {
-    $.get("http://localhost:3000/lookup", { term: $("#term").val() }).done(
+    $.get("https://cs472-dict.herokuapp.com/lookup", { term: $("#term").val() }).done(
       function (data) {
         $("#content").empty().append(
           ...data.map((result, index) => $(`<p>${index+1}(${result.wordtype}) ${result.definition}</p>`))
