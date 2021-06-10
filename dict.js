@@ -1,7 +1,6 @@
 $("button").click(wordLookup);
 
-$("button").keyup(function(e){
-    console.log('pressing key');
+$("button").keyup(function(e){    
     if(e.keyCode == 13) wordLookup();
 });
 
