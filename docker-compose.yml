@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  db:
+    image: mysql
+    restart: always
+    privileged: true
+    environment:
+      MYSQL_DATABASE: 'db'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'Jesmine'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'password'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - "3306:3306"   # MYSQL PORT 
+    tty: true 
+    stdin_open: true
+    volumes: 
+      - ./my-db:/var/lib/mysql
+volumes:
+  my-db: {}
