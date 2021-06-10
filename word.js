@@ -1,6 +1,11 @@
 const mysql = require('mysql2');
 
-const conn = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
+const conn = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "password",
+  database: "entries",
+});
 
 exports.lookup = function (req, res) {    
   conn.query(
