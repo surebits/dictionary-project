@@ -1,7 +1,6 @@
 const mysql = require('mysql2');
 
 const conn = mysql.createConnection({
-//   host: "localhost",
 //   host: "https://cs472-dict.herokuapp.com",
   user: "root",
   password: "password",
